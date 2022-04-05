@@ -1,4 +1,4 @@
-package mc322.lab3;
+package pt.c02oo.s02classe.s03lombriga;
 
 public class Animacao {
 	
