@@ -10,9 +10,8 @@ public class AppRestaUm {
       Toolkit tk = Toolkit.start(arquivoEntrada, arquivoSaida);
       
       String commands[] = tk.retrieveCommands();
-      
-      for (int l = 0; l < commands.length; l++)
-         System.out.println(commands[l]);
+
+      for (String command : commands) System.out.println(command);
       
       char board[][] = {
          {' ', ' ', 'P', 'P', 'P', ' ', ' '},
@@ -27,10 +26,10 @@ public class AppRestaUm {
       tk.writeBoard("Tabuleiro inicial", board);
       
       Tabuleiro tabuleiroJogo = new Tabuleiro();
-      
-      for (int l = 0; l < commands.length; l++) {
-    	  tabuleiroJogo.executarMovimento(commands[l]);
-    	  tabuleiroJogo.apresentar();
+
+      for (String command : commands) { //para cada comando, executaremos um movimento e mostraremos o estado do tabuleiro
+         tabuleiroJogo.executarMovimento(command);
+         tk.writeBoard(tabuleiroJogo.tituloUltimoMovimento(), tabuleiroJogo.estadoAtualTabuleiro());
       }
       
       tk.stop();
