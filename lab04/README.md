@@ -2,5 +2,5 @@
 
 ## Arquivos:
 
-- [Arquivos Java](https://github.com/Brunoatf/MC322/tree/main/lab04/pt/c02oo/s03relacionamento/s04restaum)
+- [Arquivos Java](https://github.com/Brunoatf/MC322/tree/main/lab04/src/pt/c02oo/s03relacionamento/s04restaum)
 - [Arquivos binários](https://github.com/Brunoatf/MC322/tree/main/lab04/bin/pt/c02oo/s03relacionamento/s04restaum)
