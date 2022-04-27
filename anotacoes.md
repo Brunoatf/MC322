@@ -24,6 +24,7 @@
   - Possui os mesmos atributos da superclasse
   - Herda acesso aos métodos desta superclasse
   - Pode acrescentar novos atributos e métodos
+  - É declarada com *nívelDeAcesso class nome extends nomePai*
 - Métodos na subclasse sobrescrevem os da superclasse quando têm a mesma assinatura
   - A assinatura é composta pelo nome do método + tipo dos argumentos (considerando a ordem)
   - Pode-se acessar o método da superclasse com *super.método()*
@@ -42,7 +43,7 @@
  - Princípio: uma variável declarada em uma classe pode ser instanciada em qualquer herdeira
    - Exemplo: *classe-pai nome = new classe-herdeira();*
    - O contrário não é possível: uma variável declarada na sub-classe não pode ser instanciada na super-classe. 
-     - O java entende que os métodos da sub-classe declarada estarão disponíveis, o que não acontece se a instância for da super-classe
+     - O Java entende que os métodos da sub-classe declarada estarão disponíveis, o que não acontece se a instância for da super-classe
  - Ao chamar um método que possui a mesma assinatura na pai e filha, será chamado o método da filha
  - Contudo, não é possível chamar métodos e atributos que existem apenas na filha. A declaração com o tipo da super-classe filtra fora os métodos e atributos exclusivos da classe herdeira
  - Princípio do polimorfismo no vetor: um vetor declarado em uma super-classe pode receber instâncias da super-classe e das herdeiras
