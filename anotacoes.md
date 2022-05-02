@@ -48,9 +48,10 @@
  - Contudo, não é possível chamar métodos e atributos que existem apenas na filha. A declaração com o tipo da super-classe filtra fora os métodos e atributos exclusivos da classe herdeira
  - Princípio do polimorfismo no vetor: um vetor declarado em uma super-classe pode receber instâncias da super-classe e das herdeiras
  - Amarração: ligação da chamada de um método ao método.
-   - Estática: faz isso na compilação
+   - Estática (static binding): faz isso na compilação
      - Escolhe o método da classe na qual foi declarada a referência
-   - Dinâmica: na execução, porém ocorre perda de desempenho.
+     - Pode ser escolhida em C++ para fins de desempenho
+   - Dinâmica (late binding): na execução, porém ocorre perda de desempenho.
      - Reflete a intenção do usuário e é empregada por linguagens como Python, Java e Javascript
 
 ### Classes abstratas:
