@@ -40,7 +40,7 @@
   
 ### Polimorfismo:
 
- - Princípio: uma variável declarada em uma classe pode ser instanciada em qualquer herdeira
+ - Polimorfismo é o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse podem invocar métodos que têm a mesma identificação, assinatura, mas  comportamentos distintos, especializados para cada classe derivada, usando para tanto uma referência a um objeto do tipo da superclasse.
    - Exemplo: *classe-pai nome = new classe-herdeira();*
    - O contrário não é possível: uma variável declarada na sub-classe não pode ser instanciada na super-classe. 
      - O Java entende que os métodos da sub-classe declarada estarão disponíveis, o que não acontece se a instância for da super-classe
