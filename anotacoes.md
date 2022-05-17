@@ -37,6 +37,7 @@
    - Em classes herdeiras: assinaturas diferentes ou assinaturas iguais (polimorfismo)
    - Sobrecarga de métodos feita com assinaturas diferenciadas pelo tipo de retorno são inadequadas, pois os métodos não podem ser diferenciados na chamada
    - Construtores também podem ser sobrecarregados
+   - **Interfaces podem realizar herança m
   
 ### Polimorfismo:
 
@@ -81,3 +82,27 @@
         - Ex: ((classe) variavelInterface).métodoClasse()
         - Casting não é recomendável
     - Diferente do Polimorfismo, as classes que implementam a interface não precisam ser irmãs
+
+### Arquitetura de Software
+
+  - Se concentra na integração de componentes, alto nível de abstração
+  - Exemplo: Estilo Arquitetural Model-View-Controller (MVC)
+    - **Model:** modelo subjacente da aplicação representada como estruturas de dados ou classes
+    - **View:** lida com a apresentação visual
+    - **Controller:** define o estado e comportamento da aplicação
+  - Exemplo: Estilo Arquitetural Data Flow 
+    - Cada componente recebe dados, processa-os e passa para o seguinte
+
+### Componentes
+
+  - Unidades de software auto-contidas e reusáveis
+  - Classes e interfaces empacotadas --> pode ser pensado como uma caixa preta
+  - Toda a comunicação entre um componente e o resto da aplicação é feita por meio de interfaces
+  - No Java: JavaBeans
+    - Instanciados como objetos e implementados como classes (não é um consenso em POO) 
+    - Possuem propriedades externamente observáveis que customizam a instância do componente (também não é um consenso)
+    - O construtor da classe que implementa o componente não deve possuir argumentos no construtor
+    - Instanciados como *NomeInterface = new Componente();*
+  #### Interface requerida: interface que requer operações de uma interface provida (que fornece serviços). A interface requerida possui apenas um método *connect* que a liga à interface provida
+  - Componente com interface requerida 
+    
