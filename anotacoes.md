@@ -105,4 +105,20 @@
     - Instanciados como *NomeInterface = new Componente();*
   #### Interface requerida: interface que requer operações de uma interface provida (que fornece serviços). A interface requerida possui apenas um método *connect* que a liga à interface provida
   - Componente com interface requerida 
-    
+
+### Exceções:
+
+#### Exception é uma herdeira de Throwable (essa também tem Error como filha)
+
+- Se um bloco catch for acionado, os demais não são testados
+- Escritos como *catch(<classe_excecao> nome) {}*
+- Na saída de erros, usamos *System.err.println(nome.getMessage())*
+  - Usamos err e não out porque err possui funcionalidades próprias para tratamentos de erros, como logging
+  - *nome.printStackTrace() é útil para mostrar o traçado de chamadas da exception
+- Exceções herdeiras ativam um catch com argumento em uma exceção superclasse
+- Podemos fazer uma função gerar uma exceção com *funcao throws classeExcecao {}*
+  - Dentro da função podemos escrever throw classeExcecao("mensagem")*
+- Uma exceção é repassada na pilha de chamadas e o funcionamento do programa é interrompido apenas se a exceção chega na main sem ser tratada
+- Podemos personalizar uma exceção criando uma classe que extende Exception
+- *Checked exception:* precisam ser tratadas, são todas as classes que são filhas de Exception
+- *Unchecked exception:* não precisam ser tratadas, interrompem a execução se acontecerem. A classe RunException e todas as classes escritas como herdeiras dela serão unchecked
