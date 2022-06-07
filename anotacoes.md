@@ -114,7 +114,7 @@
 - Escritos como *catch(<classe_excecao> nome) {}*
 - Na saída de erros, usamos *System.err.println(nome.getMessage())*
   - Usamos err e não out porque err possui funcionalidades próprias para tratamentos de erros, como logging
-  - *nome.printStackTrace() é útil para mostrar o traçado de chamadas da exception
+  - *nome.printStackTrace()* é útil para mostrar o traçado de chamadas da exception
 - Exceções herdeiras ativam um catch com argumento em uma exceção superclasse
 - Podemos fazer uma função gerar uma exceção com *funcao throws classeExcecao {}*
   - Dentro da função podemos escrever throw classeExcecao("mensagem")*
@@ -122,3 +122,13 @@
 - Podemos personalizar uma exceção criando uma classe que extende Exception
 - *Checked exception:* precisam ser tratadas, são todas as classes que são filhas de Exception
 - *Unchecked exception:* não precisam ser tratadas, interrompem a execução se acontecerem. A classe RunException e todas as classes escritas como herdeiras dela serão unchecked
+
+### Tipagem
+
+- **Wrapper:** O Java possui objetos equivalentes a tipos primitivos. EX: Integer para int, Double para double, etc
+- **Conversão implícita:** Podemos atribuir wrappers a tipos simples ou tipos simples a wrappers. O java faz a conversão automaticamente.
+  - Ex: *int x1 = new Integer(10);*
+  - *Integer x1  = 10;*
+- Wrapper no vetor: Podemos atribuir diferentes tipos de dados primitivos a um vetor declarado em *Object*. Toda classe de Java é herdeira de Object, e o vetor armazenará um wrapper para esses tipos no vetor, utilizando polimorfismo
+- **Java Generics:** tipos declarados entre *<>*
+
