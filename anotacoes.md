@@ -37,7 +37,6 @@
    - Em classes herdeiras: assinaturas diferentes ou assinaturas iguais (polimorfismo)
    - Sobrecarga de métodos feita com assinaturas diferenciadas pelo tipo de retorno são inadequadas, pois os métodos não podem ser diferenciados na chamada
    - Construtores também podem ser sobrecarregados
-   - **Interfaces podem realizar herança m
   
 ### Polimorfismo:
 
@@ -104,7 +103,6 @@
     - O construtor da classe que implementa o componente não deve possuir argumentos no construtor
     - Instanciados como *NomeInterface = new Componente();*
   #### Interface requerida: interface que requer operações de uma interface provida (que fornece serviços). A interface requerida possui apenas um método *connect* que a liga à interface provida
-  - Componente com interface requerida 
 
 ### Exceções:
 
@@ -131,4 +129,27 @@
   - *Integer x1  = 10;*
 - Wrapper no vetor: Podemos atribuir diferentes tipos de dados primitivos a um vetor declarado em *Object*. Toda classe de Java é herdeira de Object, e o vetor armazenará um wrapper para esses tipos no vetor, utilizando polimorfismo
 - **Java Generics:** tipos declarados entre *<>*
+
+### Padrões de Projeto (Design Patterns)
+
+- Cada padrão descreve um problema e o núcleo de uma solução para tal. Cada padrão possui um nome, problema alvo, solução e consequências (trade-offs)
+- Vantagens: aumento de produtividade e consistência, independentes de linguagem, permitem combinações
+- Desvantagens: curva de aprendizado, síndromes de adaptação técnicas, são conceitos e não código
+- Divididos em criacionais, estruturais e comportamentais
+  - **Strategy:** Resolve o problema da chamada de um mesmo método implementado em classes diferentes por meio de uma interface que contém tal método. Ex: uma classe quer chamar uma ação de pagamento de diversas classes que implementam diferentes métodos de pagamento. Para essa classe não interessa de qual é o método de pagamento, mas sim a ação de pagar - que pode ser colocada em uma interface.
+  - **Singleton:** Objetiva limitar o número de instâncias de uma classe na aplicação. 
+     - Declara-se o construtor como privado
+     - Cria-se um atributo privado, estático e final com o tipo da própria classe que armazenará uma instância
+     - Igualamos tal atributo à uma nova instância da classe
+     - Escreve-se um método getInstance que retorna tal instância única
+     - Desvantagem: a criação do objeto é sempre feita automaticamente, independentemente se ele será usado na aplicação
+  - **Facade:** Provê uma interface unificada para um corpo de código maior.
+     - Simplifica a utilização de um subsistema, garante maior segurança
+  - **Adapter:** Permite a cooperação de interfaces incompatíveis entre si (geralmente que trabalham com tipos de dados diferentes)
+    - O adaptador obtém uma interface, compatível com um dos objetos existentes.
+    - Usando essa interface, o objeto existente pode chamar os métodos do adaptador com segurança.
+    - Ao receber a chamada, o adaptador passa o pedido para o segundo objeto, mas em um formato e ordem que o segundo objeto espera.
+  - **Observer/Event-Subscriber/Listener:** Define um relacionamento de um-para-n de dependência entre objetos, de modo que se um for alterado os demais são notificados.
+    - O subject implementa a interface do observer, que possui um vetor de subscribers e métodos para subscrição e notificação
+
 
