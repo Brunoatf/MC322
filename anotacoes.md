@@ -141,7 +141,7 @@
      - Declara-se o construtor como privado
      - Cria-se um atributo privado, estático e final com o tipo da própria classe que armazenará uma instância
      - Igualamos tal atributo à uma nova instância da classe
-     - Escreve-se um método getInstance que retorna tal instância única
+     - Escreve-se um método getInstance, estático, que retorna tal instância única
      - Desvantagem: a criação do objeto é sempre feita automaticamente, independentemente se ele será usado na aplicação
   - **Facade:** Provê uma interface unificada para um corpo de código maior.
      - Simplifica a utilização de um subsistema, garante maior segurança
